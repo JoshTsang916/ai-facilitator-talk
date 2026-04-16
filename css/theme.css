@@ -730,11 +730,65 @@ html, body {
   text-align: center;
 }
 
-/* 結尾頁置中 */
-#page-ending {
+/* ========================================
+   結尾頁（Logo + 雙 QR Code）
+   ======================================== */
+
+.page-ending {
   align-items: center;
+  justify-content: center;
 }
 
-#page-ending .text-content {
-  text-align: center;
+.ending-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2em;
+}
+
+.ending-logo {
+  width: 120px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.ending-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.6em;
+  color: var(--color-text);
+  letter-spacing: 0.06em;
+}
+
+.ending-thanks {
+  font-size: 1.1em;
+  color: var(--color-muted);
+  letter-spacing: 0.04em;
+}
+
+.ending-qr-row {
+  display: flex;
+  gap: 3em;
+  margin-top: 1em;
+}
+
+.ending-qr-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.ending-qr-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.ending-qr-label {
+  font-family: var(--font-english);
+  font-size: 0.85em;
+  color: var(--color-muted);
+  letter-spacing: 0.05em;
 }

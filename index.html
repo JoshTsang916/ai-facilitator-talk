@@ -96,12 +96,8 @@
         // ==== 收尾 ====
         { id: 'lifelong-band', type: 'image', src: 'slides/slide_s02_lifelong.png', title: '一輩子的樂團', section: '收尾' },
         { id: 'closing', type: 'image', src: 'slides/slide_12.png', title: '有主動性的人，永遠不會被取代', section: '' },
-        { id: 'feeling-check', type: 'text', title: '你現在的感覺是什麼？', text: '你現在的感覺是什麼？\n是興奮，還是焦慮？', section: '' },
-        { id: 'main-quote', type: 'quote', title: '收尾關鍵句', text: '只要我們是有主動性的，\n可以把工具主動調整得更好，\n就不會被工具取代。', section: '' },
-
-        // ==== Q&A + IG ====
-        { id: 'qa', type: 'text', title: 'Q & A', text: 'Q & A', section: 'Q&A' },
-        { id: 'ig-qr', type: 'text', title: '謝謝 + Follow IG', text: '謝謝大家\n\n— Josh / 人生鍛造所 —', section: '' },
+        // ==== 結尾 ====
+        { id: 'ending', type: 'ending', title: '謝謝大家', section: '結尾' },
       ];
 
       // ============================================================
@@ -254,6 +250,29 @@
             break;
 
           // ────────────────────────────
+          // 結尾頁（Logo + QR Codes）
+          // ────────────────────────────
+          case 'ending':
+            el.classList.add('page-ending');
+            el.innerHTML = `
+              <div class="ending-content">
+                <img src="logo_lifeforge.png" alt="人生鍛造所" class="ending-logo">
+                <p class="ending-name">Josh / 人生鍛造所</p>
+                <p class="ending-thanks">謝謝大家</p>
+                <div class="ending-qr-row">
+                  <div class="ending-qr-item">
+                    <img src="joshigqrcode.png" alt="Instagram" class="ending-qr-img">
+                    <span class="ending-qr-label">Instagram</span>
+                  </div>
+                  <div class="ending-qr-item">
+                    <img src="josh_fb_qrcode.png" alt="Facebook" class="ending-qr-img">
+                    <span class="ending-qr-label">Facebook</span>
+                  </div>
+                </div>
+              </div>`;
+            break;
+
+          // ────────────────────────────
           // 時間線頁
           // ────────────────────────────
           case 'timeline':
@@ -277,11 +296,6 @@
         stage.appendChild(el);
       });
 
-      // 結尾頁加入 IG QR Code
-      const igContent = document.querySelector('#page-ig-qr .text-content');
-      if (igContent) {
-        igContent.innerHTML += '<img src="joshigqrcode.png" alt="Instagram QR Code" style="max-width:280px;margin-top:1.5em;border-radius:8px;display:block;margin-left:auto;margin-right:auto;">';
-      }
 
       // ============================================================
       // Sidebar 建構
