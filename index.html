@@ -55,60 +55,53 @@
       // ============================================================
       const PAGES = [
         // ==== 開場 ====
-        { id: 'cover', type: 'image', src: 'slides/slide-01.webp', title: '封面：與 AI 共舞', section: '開場' },
-        { id: 'n8n-story', type: 'story', title: 'n8n 三場反省', text: '去年我深入研究 n8n，\n也開了三場 n8n 工作坊。\n\n但我必須老實說——\n如果想帶大家今天能跑通 n8n，\n我們要睡在這邊。', section: '' },
-        { id: 'tool-cost', type: 'image', src: 'slides/slide-02.webp', title: '越強的工具，門檻越高', section: '' },
-        { id: 'find-skill', type: 'text', title: '我發現了 skill', text: '不是每個人都有時間和精力\n去搗鼓那些很強但成本太高的工具。\n\n於是我開始研究——\n有沒有什麼概念，門檻不高但效果不錯？\n\n我發現了一個東西，\n它叫做 skill。', section: '' },
-        { id: 'ai-status-check', type: 'text', title: '先問大家', text: '先問大家——\n目前你是怎麼用 AI 的？\n用來做些什麼？\n有沒有遇到什麼問題？', section: '' },
+        { id: 'cover', type: 'image', src: 'slides/slide_01.png', title: '封面：與 AI 共舞', section: '開場' },
+        { id: 'n8n-story', type: 'text', title: 'n8n 三場工作坊的反省', text: 'n8n 三場工作坊的反省', section: '' },
 
         // ==== 觀念地基 ====
-        { id: 'word-chain', type: 'image', src: 'slides/slide-03.webp', title: 'AI 是文字接龍', section: '觀念地基' },
-        { id: 'word-chain-game', type: 'text', title: '互動：文字接龍', text: '我說「台」，\n大家會想接什麼？\n\n台灣？\n那再來呢？', section: '' },
+        { id: 'word-chain', type: 'image', src: 'slides/slide_02.png', title: 'AI 並沒有在思考', section: '觀念地基' },
+        { id: 'word-chain-game', type: 'text', title: '互動：文字接龍', text: '我說「台」，\n大家會想接什麼？', section: '' },
         { id: 'facilitator-bridge', type: 'quote', title: '引導師母語橋', text: '我們大家都會引導人。\n而現在 AI 更需要我們的引導，\n因為他只是在做計算，\n他並不是真的會思考。', section: '' },
-        { id: 'context-onion', type: 'image', src: 'slides/slide-04.webp', title: '上下文的洋蔥結構', section: '' },
-        { id: 'design-actively', type: 'quote', title: '主動設計', text: '重點不是「怎麼問」，\n而是「先布置好它眼前看到的世界」。\n\n我們要主動去設計\nAI 所看見的。', section: '' },
+        { id: 'context-half', type: 'image', src: 'slides/slide_03.png', title: '只懂提示詞等於只做對了一半', section: '' },
+        { id: 'context-onion', type: 'image', src: 'slides/slide_04.png', title: '上下文的洋蔥結構', section: '' },
+        { id: 'design-actively', type: 'quote', title: '主動設計', text: '重點不是「怎麼問」，\n而是「先布置好它眼前看到的世界」。', section: '' },
 
         // ==== 第 1 層 preferences ====
-        { id: 'quota-warning', type: 'callback', title: 'Quota 開場提醒', text: '我們等下用 free 帳號\n跟大家一起跑。\n\n前面設定 preferences 跟 memory\n不要聊太多——\n用量留給最後跑 skill 才用。\n\n這是我昨天測試時自己撞到的坑，\n先讓你們知道。', section: '第 1 層 preferences' },
-        { id: 'preferences-rule', type: 'image', src: 'slides/slide-05.webp', title: '偏好設定：給條件，不給命令', section: '' },
-        { id: 'contradiction-pain', type: 'story', title: '矛盾痛點', text: '你寫「請簡潔回答」，\n下午又補一句「請給我詳細解釋」——\nAI 不知道該聽誰。\n\n你寫「請永遠用繁體中文」，\n但偏好設定本身寫了一段全英文——\nAI 會混亂。', section: '' },
+        { id: 'quota-warning', type: 'text', title: 'Quota 提醒', text: 'Free 帳號 →\n前面省用量，留給 skill', section: '第 1 層 preferences' },
+        { id: 'preferences-rule', type: 'image', src: 'slides/slide_05.png', title: '給予條件，而非命令', section: '' },
         { id: 'condition-not-command', type: 'quote', title: '給條件不給命令', text: '❌ 「請簡潔回答」\n\n✅ 「回答長度符合問題複雜度，\n　　簡單問題不要給長答案」', section: '' },
 
         // ==== 第 2 層 memory ====
-        { id: 'memory-auto', type: 'image', src: 'slides/slide-06.webp', title: '記憶：不要盲目相信自動產生', section: '第 2 層 memory' },
-        { id: 'gemini-story', type: 'story', title: '35 坐地能吸土', text: '我幾個月前跟 Gemini\n天馬行空地討論 podcast 名稱，\n說我想改叫「35 坐地能吸土」，\n還讓他做了封面——\n當然是開玩笑的。\n\n結果最近我發現，\n她以為我的 Podcast\n真的叫「35 坐地能吸土」。\n\n重點是——\n我還沒辦法改掉她這個錯誤認知。', section: '' },
-        { id: 'shared-account-story', type: 'story', title: '共用帳號 100 元 / 20 人', text: '前兩年 ChatGPT 剛出來的時候，\n我有跟別人共用過——\n一個月 100 元，\n但同時給 20 個人用。\n\n10 幾 20 個人的對話，\n每個人需求不一樣，\n記憶會有非常多矛盾，\n會嚴重影響 AI 的產出。', section: '' },
-        { id: 'memory-relocate-tip', type: 'text', title: 'Pro Tip：搬家提示詞', text: 'Claude 的記憶設定有個內建提示詞——\n你可以拿回 ChatGPT / Gemini 送出，\n他們會把記得的關於你的事情吐出來。\n\n貼回 Claude，\n你的記憶就搬家完成了。\n\n換 AI 的轉換成本，\n趨近於零。', section: '' },
+        { id: 'memory-auto', type: 'image', src: 'slides/slide_06.png', title: '記憶是自動產生的，但它會記錯', section: '第 2 層 memory' },
+        { id: 'gemini-story', type: 'text', title: '35 坐地能吸土', text: '35 坐地能吸土', section: '' },
+        { id: 'shared-account', type: 'text', title: '共用帳號', text: '共用帳號 20 人 = 記憶全亂', section: '' },
+        { id: 'memory-relocate', type: 'text', title: '搬家提示詞', text: 'Claude 搬家提示詞：\n把別家記憶搬過來', section: '' },
 
         // ==== L2→L3 過渡 ====
-        { id: 'context-pollution', type: 'image', src: 'slides/slide-07.webp', title: '記憶塞太多 AI 會分心變笨', section: 'L2→L3 過渡' },
-        { id: 'attention-diluted', type: 'quote', title: '注意力被稀釋', text: '你想專心討論英文，\nAI 卻在思考你的臥推多少公斤。\n\n那怎麼辦？\n→ 這時候就要有 skill 出馬了。', section: '' },
+        { id: 'context-pollution', type: 'image', src: 'slides/slide_07.png', title: '資訊全塞在一起，只會互相污染', section: 'L2→L3 過渡' },
+        { id: 'attention-diluted', type: 'text', title: 'Skill 登場', text: '討論英文，AI 卻想你臥推多少\n→ skill 出馬', section: '' },
 
         // ==== 第 3 層 skill ====
-        { id: 'skill-toolbox', type: 'image', src: 'slides/slide-08.webp', title: 'Skill 是你的專屬工具箱', section: '第 3 層 skill' },
-        { id: 'facilitator-toolbox', type: 'callback', title: '引導師工具箱類比', text: '你是引導師——\n要設計工作坊、整理活動回饋、\n寫個案分析、設計 ORID 提問。\n\n四件事全塞一個對話，\nAI 會搞混。\n\n針對每件事做一個 skill，\n就像你的工具箱——\n需要哪個拿哪個。', section: '' },
+        { id: 'skill-toolbox', type: 'image', src: 'slides/slide_08.png', title: '按需加載的專屬工具箱', section: '第 3 層 skill' },
+        { id: 'facilitator-toolbox', type: 'text', title: '引導師工具箱', text: '工作坊 / 回饋 / 個案 / ORID\n→ 各一個 skill', section: '' },
 
-        // ==== Fractal 5 階段 ====
-        { id: 'fractal-stage-1-2', type: 'image', src: 'slides/slide-09.webp', title: '不問問題的 AI 是個爛引導者', section: 'Fractal 5 階段' },
+        // ==== Fractal Demo ====
+        { id: 'fractal-collab', type: 'image', src: 'slides/slide_09.png', title: '不要糾正它，要與它共同設計', section: 'Fractal Demo' },
         { id: 'good-facilitator', type: 'quote', title: '好引導者的金句', text: '好的引導者\n會先問問題再回應。\n\nAI 沒問問題就答\n= AI 是個爛引導者。', section: '' },
-        { id: 'fractal-stage-3', type: 'image', src: 'slides/slide-10.webp', title: '從單向糾正升級為協作設計', section: '' },
-        { id: 'collaborative-design', type: 'text', title: 'Josh 高級招（meta 升級）', text: '不要停在「指責 AI 沒問夠」。\n\n升級到——\n「我們先一起列出要問什麼，\n然後你再問我。」\n\nAI 從執行者變成協作者。\n\nClaude 列的清單，\n本身就是 skill 的骨架。', section: '' },
-        { id: 'fractal-stage-4', type: 'image', src: 'slides/slide-11.webp', title: '對話封裝成永久資產', section: '' },
-        { id: 'skill-md-showcase', type: 'text', title: 'workshop-planner SKILL.md 親測', text: '觸發句：\n「你能利用 skill creator\n把這次的規劃流程做成 skill 嗎？」\n\nClaude 自動完成：\n1. 讀 skill creator 文件\n2. 自動建檔\n3. 自我 review\n4. 打包 .skill 檔\n\n→ 你會親眼看到\n　 Claude 自己讀、自己建、\n　 自己 review、自己打包。', section: '' },
-        { id: 'fractal-stage-5', type: 'image', src: 'slides/slide-12.webp', title: '即使遇到限制 Skill 也能帶著走', section: '' },
-        { id: 'quota-callback', type: 'callback', title: '撞 quota → 故障變教材', text: '今天我用 free 帳號\n跟你們同步跑，\n撞 quota 是預期內的。\n\n撞到的時候，\n我切 Pro 帳號\n順便演示「手動匯入 skill」——\n故障變成第二個 demo。', section: '' },
+        { id: 'skill-soul', type: 'image', src: 'slides/slide_10.png', title: '你踩過的坑，就是 Skill 的靈魂', section: '' },
+        { id: 'skill-asset', type: 'image', src: 'slides/slide_11.png', title: '這是一份會越用越強的資產', section: '' },
+        { id: 'quota-callback', type: 'text', title: '撞 quota', text: '撞 quota →\n切 Pro → 手動匯入 demo', section: '' },
 
         // ==== 學員動手 ====
-        { id: 'your-turn', type: 'image', src: 'slides/slide-13.webp', title: '現在，換你動手', section: '學員動手' },
-        { id: 'practice-prompt', type: 'text', title: '實作流程', text: '1. 開新對話\n2. 從 L1 直接問\n3. 加上下文 → 看到答案變好\n4. 封裝成 skill\n5. 測試\n\n卡住舉手，Josh 過去支援。\n\n時間夠的話，\n互相看看對方做的 skill。', section: '' },
+        { id: 'practice-prompt', type: 'text', title: '實作流程', text: '1. 開新對話\n2. 從 L1 直接問\n3. 加上下文 → 看到答案變好\n4. 封裝成 skill\n5. 測試\n\n卡住舉手，Josh 過去支援。', section: '學員動手' },
 
         // ==== 收尾 ====
-        { id: 'closing-key', type: 'image', src: 'slides/slide-14.webp', title: '主動性金句', section: '收尾' },
-        { id: 'feeling-check', type: 'text', title: '你現在的感覺是什麼？', text: '今天我們設定了 AI、\n也跑了一次 skill 製作流程。\n\n問問大家——\n\n你現在的感覺是什麼？\n是興奮，還是焦慮？', section: '' },
+        { id: 'closing', type: 'image', src: 'slides/slide_12.png', title: '有主動性的人，永遠不會被取代', section: '收尾' },
+        { id: 'feeling-check', type: 'text', title: '你現在的感覺是什麼？', text: '你現在的感覺是什麼？\n是興奮，還是焦慮？', section: '' },
         { id: 'main-quote', type: 'quote', title: '收尾關鍵句', text: '只要我們是有主動性的，\n可以把工具主動調整得更好，\n就不會被工具取代。', section: '' },
 
         // ==== Q&A + IG ====
-        { id: 'qa', type: 'text', title: 'Q & A', text: 'Q & A\n\n10-15 分鐘\n\n有什麼想問的？\n哪個段落想再聊？', section: 'Q&A' },
+        { id: 'qa', type: 'text', title: 'Q & A', text: 'Q & A', section: 'Q&A' },
         { id: 'ig-qr', type: 'text', title: '謝謝 + Follow IG', text: '謝謝大家\n\n— Josh / 人生鍛造所 —', section: '' },
       ];
 
