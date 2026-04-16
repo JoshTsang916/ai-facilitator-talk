@@ -466,8 +466,14 @@
       // ============================================================
       // 操作提示（首次進入顯示，點擊或 3 秒後消失）
       // ============================================================
+      const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
       const hint = document.createElement('div');
       hint.id = 'nav-hint';
+      const hintContent = isMobile
+        ? `👆 <b>點右側</b> 下一頁 ・ <b>點左側</b> 上一頁<br>
+           👉 也可以<b>左右滑動</b>換頁`
+        : `⌨️ <b>方向鍵 ← →</b> 換頁<br>
+           📑 按 <b>S</b> 開啟側邊欄（頁面導航）`;
       hint.innerHTML = `
         <div style="
           position:fixed;inset:0;z-index:9999;
@@ -478,9 +484,7 @@
           cursor:pointer;
         ">
           <div style="background:rgba(92,64,51,0.9);padding:32px 40px;border-radius:16px;max-width:80%;">
-            👆 <b>點右側</b> 下一頁 ・ <b>點左側</b> 上一頁<br>
-            👉 也可以<b>左右滑動</b>換頁<br>
-            ⌨️ 電腦用<b>方向鍵</b>操作<br>
+            ${hintContent}<br>
             <span style="opacity:0.6;font-size:14px;">點任意處關閉提示</span>
           </div>
         </div>`;
