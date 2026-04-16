@@ -56,47 +56,42 @@
       const PAGES = [
         // ==== 開場 ====
         { id: 'cover', type: 'image', src: 'slides/slide_01.png', title: '封面：與 AI 共舞', section: '開場' },
-        { id: 'n8n-story', type: 'text', title: 'n8n 三場工作坊的反省', text: 'n8n 三場工作坊的反省', section: '' },
 
         // ==== 觀念地基 ====
         { id: 'word-chain', type: 'image', src: 'slides/slide_02.png', title: 'AI 並沒有在思考', section: '觀念地基' },
         { id: 'word-chain-game', type: 'text', title: '互動：文字接龍', text: '我說「台」，\n大家會想接什麼？', section: '' },
         { id: 'facilitator-bridge', type: 'quote', title: '引導師母語橋', text: '我們大家都會引導人。\n而現在 AI 更需要我們的引導，\n因為他只是在做計算，\n他並不是真的會思考。', section: '' },
+        { id: 'calm-ai', type: 'image', src: 'slides/slide_s03_calm.png', title: '越冷靜，越聰明', section: '' },
         { id: 'context-half', type: 'image', src: 'slides/slide_03.png', title: '只懂提示詞等於只做對了一半', section: '' },
         { id: 'context-onion', type: 'image', src: 'slides/slide_04.png', title: '上下文的洋蔥結構', section: '' },
+        { id: '80-words-magic', type: 'image', src: 'slides/slide_s01_80words.png', title: '80 字的魔法', section: '' },
         { id: 'design-actively', type: 'quote', title: '主動設計', text: '重點不是「怎麼問」，\n而是「先布置好它眼前看到的世界」。', section: '' },
 
         // ==== 第 1 層 preferences ====
-        { id: 'quota-warning', type: 'text', title: 'Quota 提醒', text: 'Free 帳號 →\n前面省用量，留給 skill', section: '第 1 層 preferences' },
-        { id: 'preferences-rule', type: 'image', src: 'slides/slide_05.png', title: '給予條件，而非命令', section: '' },
+        { id: 'preferences-rule', type: 'image', src: 'slides/slide_05.png', title: '給予條件，而非命令', section: '第 1 層 preferences' },
         { id: 'condition-not-command', type: 'quote', title: '給條件不給命令', text: '❌ 「請簡潔回答」\n\n✅ 「回答長度符合問題複雜度，\n　　簡單問題不要給長答案」', section: '' },
 
         // ==== 第 2 層 memory ====
         { id: 'memory-auto', type: 'image', src: 'slides/slide_06.png', title: '記憶是自動產生的，但它會記錯', section: '第 2 層 memory' },
-        { id: 'gemini-story', type: 'text', title: '35 坐地能吸土', text: '35 坐地能吸土', section: '' },
-        { id: 'shared-account', type: 'text', title: '共用帳號', text: '共用帳號 20 人 = 記憶全亂', section: '' },
-        { id: 'memory-relocate', type: 'text', title: '搬家提示詞', text: 'Claude 搬家提示詞：\n把別家記憶搬過來', section: '' },
 
         // ==== L2→L3 過渡 ====
         { id: 'context-pollution', type: 'image', src: 'slides/slide_07.png', title: '資訊全塞在一起，只會互相污染', section: 'L2→L3 過渡' },
-        { id: 'attention-diluted', type: 'text', title: 'Skill 登場', text: '討論英文，AI 卻想你臥推多少\n→ skill 出馬', section: '' },
 
         // ==== 第 3 層 skill ====
         { id: 'skill-toolbox', type: 'image', src: 'slides/slide_08.png', title: '按需加載的專屬工具箱', section: '第 3 層 skill' },
-        { id: 'facilitator-toolbox', type: 'text', title: '引導師工具箱', text: '工作坊 / 回饋 / 個案 / ORID\n→ 各一個 skill', section: '' },
 
         // ==== Fractal Demo ====
         { id: 'fractal-collab', type: 'image', src: 'slides/slide_09.png', title: '不要糾正它，要與它共同設計', section: 'Fractal Demo' },
         { id: 'good-facilitator', type: 'quote', title: '好引導者的金句', text: '好的引導者\n會先問問題再回應。\n\nAI 沒問問題就答\n= AI 是個爛引導者。', section: '' },
         { id: 'skill-soul', type: 'image', src: 'slides/slide_10.png', title: '你踩過的坑，就是 Skill 的靈魂', section: '' },
         { id: 'skill-asset', type: 'image', src: 'slides/slide_11.png', title: '這是一份會越用越強的資產', section: '' },
-        { id: 'quota-callback', type: 'text', title: '撞 quota', text: '撞 quota →\n切 Pro → 手動匯入 demo', section: '' },
 
         // ==== 學員動手 ====
         { id: 'practice-prompt', type: 'text', title: '實作流程', text: '1. 開新對話\n2. 從 L1 直接問\n3. 加上下文 → 看到答案變好\n4. 封裝成 skill\n5. 測試\n\n卡住舉手，Josh 過去支援。', section: '學員動手' },
 
         // ==== 收尾 ====
-        { id: 'closing', type: 'image', src: 'slides/slide_12.png', title: '有主動性的人，永遠不會被取代', section: '收尾' },
+        { id: 'lifelong-band', type: 'image', src: 'slides/slide_s02_lifelong.png', title: '一輩子的樂團', section: '收尾' },
+        { id: 'closing', type: 'image', src: 'slides/slide_12.png', title: '有主動性的人，永遠不會被取代', section: '' },
         { id: 'feeling-check', type: 'text', title: '你現在的感覺是什麼？', text: '你現在的感覺是什麼？\n是興奮，還是焦慮？', section: '' },
         { id: 'main-quote', type: 'quote', title: '收尾關鍵句', text: '只要我們是有主動性的，\n可以把工具主動調整得更好，\n就不會被工具取代。', section: '' },
 
